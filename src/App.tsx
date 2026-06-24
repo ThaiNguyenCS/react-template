@@ -1,24 +1,22 @@
-import { useState } from 'react'
 import './App.css'
+import NaiveForm from './01-react-hook-form/naive-form'
+import UsingReactHookForm from './01-react-hook-form/using-react-hook-form'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-  
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Routes >
+          <Route path="/react-hook-form">
+            <Route path="good" element={<UsingReactHookForm />} />
+            <Route path="naive" element={<NaiveForm />} />
+          </Route>
+        </Routes>
+
+      </BrowserRouter >
+
     </>
   )
 }
