@@ -1,0 +1,9 @@
+{
+    "recipes": {
+        "id": "1",
+        "title": "ahihi",
+        "image": "ahihi.jpeg",
+        "description": "this is the description",
+        "vegan": false
+    }
+}
